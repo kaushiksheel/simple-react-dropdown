@@ -26,10 +26,19 @@
   ],
   "scripts": {
     "dev": "vite",
+    "start": "tsc && node index.js",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushiksheel/simple-react-dropdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaushiksheel/simple-react-dropdown.git/issues"
+  },
+  "homepage": "https://github.com/kaushiksheel/simple-react-dropdown.git#readme",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "react": "^18.2.0",
