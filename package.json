@@ -39,6 +39,8 @@
     "url": "https://github.com/kaushiksheel/simple-react-dropdown.git/issues"
   },
   "homepage": "https://github.com/kaushiksheel/simple-react-dropdown.git#readme",
+  "author": "kaushik sheel",
+  "license": "ISC",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "react": "^18.2.0",
