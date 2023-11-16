@@ -3,7 +3,7 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { List } from "./List";
 
 type Props = {
-  list: string[];
+  list?: string[];
   defaultValue?: string;
   getSelectedValue?: (selectedValue: string) => void;
   isSearchable?: boolean;
@@ -25,13 +25,15 @@ export const Dropdown = ({
     setQuery(e.currentTarget.value);
   };
 
-  const filteredList = list.filter((item) => {
-    if (query !== "") {
-      return item.toLowerCase().includes(query.toLowerCase());
-    } else {
-      return item;
-    }
-  });
+  const filteredList = list
+    ? list?.filter((item) => {
+        if (query !== "") {
+          return item.toLowerCase().includes(query.toLowerCase());
+        } else {
+          return item;
+        }
+      })
+    : [""];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
