@@ -21,6 +21,8 @@ The Dropdown component accepts the following props:
 - `setQuery`: A function that sets the selected option.
 - `getSelectedValue`: An optional function that gets the selected value.
 - `placeholder`: An optional string that sets a placeholder when the list is empty.
+- `className`: An optional string that sets custom styles.
+
 
 Here's an example of how to use these props:
 

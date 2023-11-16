@@ -1,6 +1,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { List } from "./List";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   list?: string[];
@@ -8,6 +9,7 @@ type Props = {
   getSelectedValue?: (selectedValue: string) => void;
   isSearchable?: boolean;
   placeholder?: string;
+  className?: string;
 };
 
 export const Dropdown = ({
@@ -16,6 +18,7 @@ export const Dropdown = ({
   getSelectedValue,
   isSearchable = true,
   placeholder = "No match found",
+  className,
 }: Props) => {
   const [query, setQuery] = useState(defaultValue || "");
   const [openList, setOpenList] = useState(false);
@@ -55,7 +58,7 @@ export const Dropdown = ({
     <div
       ref={dropdownRef}
       onClick={() => setOpenList(!openList)}
-      className="w-full relative border rounded-md"
+      className={`${twMerge("w-full relative border rounded-md ", className)}`}
       role="combobox"
       aria-haspopup="listbox"
       aria-expanded={openList}
