@@ -31,9 +31,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/simple-react-dropdown"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaushiksheel/simple-react-dropdown.git"
